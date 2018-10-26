@@ -39,6 +39,9 @@ $ rails server
 
 rails generate migration add_index_to_users_email
 rails generate migration add_password_digest_to_users password_digest:string
+rails generate integration_test users_signup
+rails db:migrate:reset
+heroku run rails console --sandbox
 
 For more information, see the
 [*Ruby on Rails Tutorial* book](http://www.railstutorial.org/book).
