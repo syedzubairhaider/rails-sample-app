@@ -37,6 +37,7 @@ If the test suite passes, you'll be ready to run the app in a local server:
 $ rails server
 ```
 
+rails generate controller Sessions new
 rails generate migration add_index_to_users_email
 rails generate migration add_password_digest_to_users password_digest:string
 rails generate integration_test users_signup
