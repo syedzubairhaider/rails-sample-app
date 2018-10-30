@@ -39,6 +39,7 @@ $ rails server
 
 rails generate controller Sessions new
 rails generate migration add_index_to_users_email
+rails generate migration add_remember_digest_to_users remember_digest:string
 rails generate migration add_password_digest_to_users password_digest:string
 rails generate integration_test users_signup
 rails db:migrate:reset
