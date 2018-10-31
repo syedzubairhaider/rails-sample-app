@@ -41,8 +41,12 @@ rails generate controller Sessions new
 rails generate migration add_index_to_users_email
 rails generate migration add_remember_digest_to_users remember_digest:string
 rails generate migration add_password_digest_to_users password_digest:string
+rails generate migration add_admin_to_users admin:boolean
 rails generate integration_test users_signup
+rails generate integration_test users_edit
+rails generate integration_test users_index
 rails db:migrate:reset
+rails db:seed
 heroku run rails console --sandbox
 
 For more information, see the
