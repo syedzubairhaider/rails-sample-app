@@ -38,6 +38,7 @@ $ rails server
 ```
 
 rails generate controller Sessions new
+rails generate controller AccountActivations
 rails generate migration add_index_to_users_email
 rails generate migration add_remember_digest_to_users remember_digest:string
 rails generate migration add_password_digest_to_users password_digest:string
@@ -45,9 +46,15 @@ rails generate migration add_admin_to_users admin:boolean
 rails generate integration_test users_signup
 rails generate integration_test users_edit
 rails generate integration_test users_index
+rails generate mailer UserMailer account_activation password_reset
 rails db:migrate:reset
-rails db:seed
+heroku addons:create sendgrid:starter
+Created sendgrid-closed-35293 as SENDGRID_PASSWORD, SENDGRID_USERNAME
 heroku run rails console --sandbox
+heroku pg:reset DATABASE
+heroku run rails db:migrate
+heroku run rails db:seed
+heroku restart
 
 For more information, see the
 [*Ruby on Rails Tutorial* book](http://www.railstutorial.org/book).
