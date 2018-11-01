@@ -55,6 +55,7 @@ heroku pg:reset DATABASE
 heroku run rails db:migrate
 heroku run rails db:seed
 heroku restart
+heroku logs
 
 For more information, see the
 [*Ruby on Rails Tutorial* book](http://www.railstutorial.org/book).
