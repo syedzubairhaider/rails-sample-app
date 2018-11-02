@@ -40,6 +40,8 @@ $ rails server
 rails generate controller Sessions new
 rails generate controller AccountActivations
 rails generate controller PasswordResets new edit --no-test-framework
+rails generate controller Microposts
+rails generate model Micropost content:text user:references
 rails generate migration add_index_to_users_email
 rails generate migration add_remember_digest_to_users remember_digest:string
 rails generate migration add_password_digest_to_users password_digest:string
@@ -50,6 +52,7 @@ rails generate integration_test users_edit
 rails generate integration_test users_index
 rails generate integration_test password_resets
 rails generate mailer UserMailer account_activation password_reset
+rails test test/models/micropost_test.rb
 rails db:migrate:reset
 heroku addons:create sendgrid:starter
 heroku config:get SENDGRID_USERNAME
