@@ -1,6 +1,10 @@
 <%= form_for(@user) do |f| %>
     <%= render 'shared/error_messages', object: f.object   %>
-  
+
+    <%= f.label :change_picture %>
+    <%= image_tag(@user.picture, size: "50x50", alt: @user.name)  %>
+    <%= f.file_field :picture, accept: 'image/jpeg,image/gif,image/png' %>
+
     <%= f.label :name %>
     <%= f.text_field :name, class: 'form-control' %>
   

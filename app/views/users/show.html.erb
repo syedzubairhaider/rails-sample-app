@@ -3,7 +3,13 @@
   <aside class="col-md-4">
     <section class="user_info">
       <h1>
+
+        <% if @user.picture? %>
+          <%= image_tag(@user.picture, size: "90x90", alt: @user.name)  %>
+        <% else %>
         <%= gravatar_for @user %>
+        <% end %>
+
         <%= @user.name %>
       </h1>
     </section>
