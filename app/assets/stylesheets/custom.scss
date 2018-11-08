@@ -1,6 +1,21 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+/* search form */
+
+.padding-0{
+  padding-right:0;
+  padding-left:0;
+}
+
+.no-border-radius {
+  border-radius: 0 !important;
+}
+
+.form {
+  margin-top: 5px;
+}
+
 /* mixins, variables, etc. */
 
 $gray-medium-light: #eaeaea;
