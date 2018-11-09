@@ -1,19 +1,4 @@
-# Ruby on Rails Tutorial sample application
-
-This is the sample application for
-[*Ruby on Rails Tutorial:
-Learn Web Development with Rails*](http://www.railstutorial.org/)
-by [Michael Hartl](http://www.michaelhartl.com/).
-
-## License
-
-All source code in the [Ruby on Rails Tutorial](http://railstutorial.org/)
-is available jointly under the MIT License and the Beerware License. See
-[LICENSE.md](LICENSE.md) for details.
-
-## Getting started
-
-To get started with the app, clone the repo and then install the needed gems:
+This is the sample application
 
 ```
 $ bundle install --without production
@@ -69,6 +54,3 @@ heroku run rails db:migrate
 heroku run rails db:seed
 heroku restart
 heroku logs
-
-For more information, see the
-[*Ruby on Rails Tutorial* book](http://www.railstutorial.org/book).
