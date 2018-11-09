@@ -2,7 +2,13 @@
     <%= render 'shared/error_messages', object: f.object   %>
 
     <%= f.label :change_picture %>
-    <%= image_tag(@user.picture, size: "50x50", alt: @user.name)  %>
+
+    <% if @user.picture? %>
+      <%= image_tag(@user.picture, size: "50x50", alt: @user.name)  %>
+    <% else %>
+      <%= gravatar_for @user, size: 50 %>
+    <% end %>
+
     <%= f.file_field :picture, accept: 'image/jpeg,image/gif,image/png' %>
 
     <%= f.label :name %>

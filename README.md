@@ -1,26 +1,4 @@
-This is the sample application
-
-```
-$ bundle install --without production
-```
-
-Next, migrate the database:
-
-```
-$ rails db:migrate
-```
-
-Finally, run the test suite to verify that everything is working correctly:
-
-```
-$ rails test
-```
-
-If the test suite passes, you'll be ready to run the app in a local server:
-
-```
-$ rails server
-```
+some commands used in building this app
 
 rails generate controller Sessions new
 rails generate controller AccountActivations
